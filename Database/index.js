@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const mongodbConnection = async () => {
 
-    mongoose.connect("mongodb://localhost:27017/demo12").then(() => {
+    mongoose.connect(process.env.DATABASE_URL).then(() => {
         console.log("mongodb connection")
     });
 
